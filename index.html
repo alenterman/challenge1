@@ -1,8 +1,87 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+		<!-- https://alenterman.github.io/challenge1/ -->
+		
+		<meta charset="utf-8" />
+		<title>SPACE X</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script src="main.js" defer> </script>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
+
+		<header id="header">
+		  	<figure id="spaceLogo">
+				<img src="images/spacex-logo-black-and-white.png" alt="Space X logo" id="spaceFoto"/>
+			</figure>
+		  		
+		</header>
+			
+		<p id="datum"></p>	
+
+
+		<article id="snelheidArticle" class="border">
+			<p class="titel">SNELHEID</p>
+			<p id="snelheid" class="bold">22.530</p>
+			<p id="snelTekst">KILOMETER PER UUR</p>
+		</article>
+
+		<article id="tijdArticle" class="border">
+			<p class="titel">TIJD</p>
+			<p id="tijd" class="bold"></p>
+	
+			<p id="tijdTekst">CENTRAL EUROPEAN TIME</p>
+		</article>
+
+		<div id="chartDagen" class="border">
+			<p class="titel">AANTAL DAGEN ONDERWEG</p>
+			<canvas id="donut"></canvas>
+			<p id="dagenTekst">182 DAGEN ONDERWEG</p>
+		</div>
+
+		<div id="chartAfstand" class="border">
+			<p class="titel" id="afstandTitel">AFSTAND AFEGELEGD PER MAAND</p>
+			<canvas id="line"></canvas>
+		</div>
+
+		<div id="chartBrandstof" class="border">
+			<p class="titel">BRANDSTOFVERBRUIK PER MAAND</p>
+			<canvas id="bar"></canvas>
+		</div>
 		
+		<div id="chartWater" class="border">
+			<p class="titel">WATERINNAME DEZE WEEK</p>
+			<canvas id="barWater"></canvas>
+		</div>
+
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

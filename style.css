@@ -1,0 +1,457 @@
+body{
+	background-color:black;
+	color: white;
+	display:grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-areas: 
+	"menu menu"
+	"datum datum"
+	"snelheid tijd"
+	"dagen dagen"
+	"afstand afstand"
+	"brandstof brandstof"
+	"water water"
+	
+	;
+}
+
+
+.border{
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+p{
+	font-family: Arial;
+}
+
+.bold{
+	font-weight: bold;
+	text-align: center;
+	font-size: 40px;
+	margin:10px;
+}
+
+
+
+/*logo styles*/
+
+#spaceFoto{
+	width:55%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#spaceLogo{
+	margin: 0px;
+}
+
+
+
+
+
+/*media querie voor telefoon schermen en alles kleiner dan een IPad*/
+
+@media only screen and (max-width: 768px){
+
+
+
+#datum{
+	grid-area: datum;
+	margin-left: 18px;
+	font-style: italic;
+}
+
+#header{
+	grid-area: menu;
+}
+
+
+#snelheidArticle{
+	width: 83%;
+	grid-area: snelheid;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#snelTekst{
+	text-align: center;
+	font-size: 12px;
+	padding: 5px;
+}
+
+
+
+#tijdArticle{
+	width: 83%;
+	grid-area: tijd;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#tijdTekst{
+	text-align: center;
+	font-size: 12px;
+	padding: 5px;
+}
+
+
+#chartDagen{
+	grid-area: dagen;
+	width: 92%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+
+}
+.titel{
+	font-style: italic;
+	margin-left: 10px;
+}
+#donut{
+	margin-bottom: 20px;
+}
+#dagenTekst{
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+}
+
+
+
+
+#chartAfstand{
+	grid-area: afstand;
+	width: 92%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+}
+
+
+
+
+#chartBrandstof{
+	grid-area: brandstof;
+	width: 92%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#chartWater{
+	grid-area: water;
+	width: 92%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+
+}
+
+
+
+/*media querie voor ipad
+*/
+@media only screen and (min-width: 769px){
+
+
+body{
+	margin: 20px;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-areas: 
+	"menu menu menu menu"
+	"snelheid tijd dagen dagen"
+	"afstand afstand dagen dagen"
+	"afstand afstand datum datum"
+	"brandstof brandstof water water "
+
+	
+	;
+	column-gap: 20px;
+	grid-row-gap: 20px;
+	}
+
+.titel{
+	font-style: italic;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+
+#header{
+	grid-area: menu;
+}
+
+#spaceLogo{
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+#datum{
+	grid-area: datum;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	font-style: italic;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#snelheidArticle{
+	grid-area: snelheid;
+}
+#snelTekst{
+	font-size: 12px;
+}
+
+#tijdArticle{
+	grid-area: tijd;
+}
+#tijdTekst{
+	font-size: 12px;
+}
+
+#chartDagen{
+	grid-area: dagen;
+	align-self: stretch;
+}	
+
+#chartAfstand{
+	grid-area: afstand;
+	align-self: start;
+}
+#afstandTitel{
+	margin-bottom: 15px;
+}
+
+
+#chartBrandstof{
+	grid-area: brandstof;
+}
+
+#chartWater{
+	grid-area: water;
+}
+
+
+.border{
+	padding: 10px;
+}
+
+#dagenTekst{
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 35px;
+}
+
+
+
+
+}
+
+
+/*media querie voor laptop
+*/
+@media only screen and (min-width: 1280px){
+	body{
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		grid-template-areas: 
+		"menu menu menu menu menu"
+		"snelheid dagen dagen water water"
+		"tijd dagen dagen water water"
+		"tijd dagen dagen brandstof brandstof"
+		"datum afstand afstand brandstof brandstof"
+		". afstand afstand brandstof brandstof"
+		". afstand afstand . ."	
+		;
+		column-gap: 20px;
+		grid-row-gap: 20px;
+		margin-left: 60px;
+		margin-right: 60px;
+
+
+
+	}
+
+	#header{
+		grid-area: menu;
+	}
+
+	#datum{
+		grid-area: datum;
+		align-self: start;
+	}
+
+	.titel{
+		font-style: italic;
+		margin-left: 10px;
+		font-size: 14px;
+	}
+
+	#snelheidArticle{
+		grid-area: snelheid;
+		align-self: start;
+	}
+	#snelTekst{
+		font-size: 12px;
+	}
+
+	#tijdArticle{
+		grid-area: tijd;
+		align-self: center;
+	}
+	#tijdTekst{
+		font-size: 12px;
+	}
+
+	#chartDagen{
+		grid-area: dagen;
+		align-self: stretch;
+	}
+
+	#chartAfstand{
+		grid-area: afstand;
+	}
+
+	#chartBrandstof{
+		grid-area: brandstof;
+	}
+
+	#chartWater{
+		grid-area: water;
+	}
+
+
+
+
+
+}
+
+/*media querie voor desktop*/
+
+@media only screen and (min-width: 1920px){
+	body{
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-areas: 
+		"menu menu menu menu menu menu"
+		"snelheid tijd dagen dagen brandstof brandstof"
+		"snelheid tijd dagen dagen brandstof brandstof"
+		"snelheid tijd dagen dagen brandstof brandstof"
+		"water water dagen dagen brandstof brandstof"
+		"water water dagen dagen afstand afstand"
+		"water water datum datum afstand afstand"
+		". . . . afstand afstand"
+		;
+		column-gap: 20px;
+		grid-row-gap: 20px;
+		margin-left: 100px;
+		margin-right: 100px;
+
+
+	}
+
+	#header{
+		grid-area: menu;
+	}
+	#spaceFoto{
+		width: 45%;
+	}
+
+	#datum{
+		grid-area: datum;
+		font-size: 45px;	
+	}
+
+	#snelheidArticle{
+		grid-area: snelheid;
+		align-self: stretch;
+	}
+	#snelTekst{
+		text-align: center;
+	}
+
+	.bold{
+		font-size: 55px;
+
+	}
+
+	.titel{
+		font-size: 16px;
+	}
+	
+	#tijdArticle{
+		grid-area: tijd;
+		align-self: stretch;
+	}
+	#tijdTekst{
+		text-align: center;
+
+	}
+	
+	#chartDagen{
+		grid-area: dagen;
+		align-self: start;
+	}
+
+	#chartAfstand{
+		grid-area: afstand;
+	}
+
+	#chartBrandstof{
+		grid-area: brandstof;
+	}
+
+	#chartWater{
+		grid-area: water;
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
